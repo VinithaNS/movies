@@ -64,7 +64,7 @@ export default function App(){
         <Route path="/" element={<Home />} />
         <Route path="/films" element={<Navigate replace to="/movies"/>} />
         <Route path="/movies" element={<MovieList />} />
-        <Route path="/movies/:movieid" element={<MovieDetails   />} />
+        <Route path="/movies/:id" element={<MovieDetails   />} />
         {/* : dynamically matches route */}
         <Route path="/movies/add" element={<AddMovie />} />
          <Route path="/movies/edit/:id" element={<EditMovie />} /> 
