@@ -9,14 +9,11 @@ import { useNavigate } from "react-router-dom";
 import { Movie } from "./Movie";
 import {API} from "./global";
 
-
-
-
 export function MovieList(){
   const[movieList, setMovieList]=useState([]);
   
   const getMovies=()=>{
-    fetch(`${API}/moviedata`,{method:"GET"})
+    fetch(`${API}/movies`,{method:"GET"})
     .then((data)=>data.json())
     .then((movies)=>setMovieList(movies));
   };
@@ -25,7 +22,7 @@ export function MovieList(){
     console.log("Deleting movie:",id);
  
   
-  fetch(`${API}/moviedata/${id}`,{method:"DELETE"})
+  fetch(`${API}/movies/${id}`,{method:"DELETE"})
   .then(()=>getMovies());
  };
 

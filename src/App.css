@@ -28,7 +28,7 @@
 .movie-summary{
   padding:20px;
   margin-top:0;
-  
+  background-color: lightgrey;
 }
 .movie-rating{
   margin-right: 10px;
